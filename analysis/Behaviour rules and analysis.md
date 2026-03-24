@@ -25,9 +25,9 @@ AC Behaviour rules
     - Proper trail braking improves performance
 
 
-Test A (T1 Fastest lap)
+Test A (T1 Fastest lap)  # Add 2nd fastest lap due to driving error in fastest lap
 
-- Speed 272kmph
+- Speed 273kmph
 
 - Decel
     - Almost immediate peak of -2.2296 G
@@ -35,10 +35,14 @@ Test A (T1 Fastest lap)
     - While braking at 100% but before turning, G fluctuates between -2.2296 and -1.6327
     - Stable at 100% brake input (stays within range this range)
     - -1.6518 G at the start of steering (18.52°, brake 98.25%)
+    - Minimum speed 69.1kmph
+    - Distance at brake start 747m
+    - Distance at turn-in 882m
+    - Distance at min-speed 917m
 
 Test A (T2 Fastest lap)
 
-- Speed 254kmph
+- Speed 255kmph
 
 - Decel
     - Almost immediate peak of -1.9969 G
@@ -46,6 +50,21 @@ Test A (T2 Fastest lap)
     - While braking at 100% but before turning, G fluctuates -1.9969 and -1.4177
     - Stable at 100% brake input (stays within range this range)
     - -1.6021 G at start of steering (-17.60°, brake 98.18%)
+    - Minimum speed 91.4kmph
+    - Distance at brake start 1978m
+    - Distance at turn-in 2091m
+    - Distance at min-speed 2119m
+
+Key
+
+- Distance: measured in meters from start of lap
+- Brake start: brake > 5%
+- Turn-in: steering <> 5°
+- Min-speed: braking zone speed measured when brake < 5%
+
+
+
+
 
 Test D (iRacing GT3 T19 end of blanchimont)
 
