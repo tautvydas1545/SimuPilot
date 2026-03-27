@@ -22,21 +22,14 @@ Realistic GT3 driving and braking requires significantly more finesse and techni
 2. **The core tyre model is deeply embedded** in the simulation. Parameters and curves can be tuned and behaviour can be mimicked, but only within the bounds of what the Assetto Corsa tyre model architecture allows.
 
 ---
-
-## Project Structure
-
-| File | Description |
-|---|---|
-| `README.md` | This file — project goals, overview, and limitations |
-| `Behaviour_rules_and_analysis.md` | Telemetry-based analysis of current vs target braking behaviour |
-| `GT3_Braking_Telemetry_Analysis.xlsx` | Full telemetry data export — Test A, B, C comparison and raw channel data |
-
----
-
+ 
 ## Current Status
-
-**Phase: Baseline analysis**
-
-Telemetry testing has been completed on the unmodified Kunos AMG GT3 (2015) at Monza T1 using MoTeC i2 Pro. Three braking technique tests (A, B, C) have been logged and analysed. Key unrealistic behaviours have been identified and quantified. iRacing comparison data (Test D) is pending analysis.
-
-See `Behaviour_rules_and_analysis.md` for full findings.
+ 
+**Phase: v2 physics mod — pending test results**
+ 
+Baseline telemetry testing completed on the unmodified Kunos AMG GT3 (2015) at Monza T1 using MoTeC i2 Pro. Three braking technique tests (A, B, C) were logged, analysed, and CSV-verified against MoTeC. Four key unrealistic behaviours were identified and quantified — longitudinal grip too stable, friction circle not enforced, ABS over-drive carrying no penalty, and proper technique being slower than incorrect technique.
+ 
+A coordinated first physics mod (v2_braking_rework_1) has been implemented across `tyres.ini`, `electronics.ini`, `abs_control.lut`, and `aero.ini` targeting all four findings. Testing using the same A/B/C protocol at Monza T1 is pending.
+ 
+See `analysis/behaviour_rules_and_analysis.md` for full baseline findings and `analysis/GT3_Braking_Telemetry_Analysis.xlsx` for telemetry data and implemented changes.
+ 
